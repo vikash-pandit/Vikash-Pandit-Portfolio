@@ -271,22 +271,29 @@
         </div>
       </div>
 
- <!-- COntact section ----------------- -->
-  <section class="contact" id="contact">
+ <!-- Contact section ----------------- -->
+ <section class="contact" id="contact">
   <h2>Contact Me</h2>
   <p>Have a question or want to work together? Feel free to reach out!</p>
-  <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" >
-    <input type="text"  name="name" placeholder="Your Name" required />
-    <input type="email"  name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  
+  <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <div class="form-group">
+      <input type="text" name="name" id="name" required />
+      <label for="name">Your Name</label>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" id="email" required />
+      <label for="email">Your Email</label>
+    </div>
+    <div class="form-group">
+      <textarea name="message" id="message" rows="5" required></textarea>
+      <label for="message">Your Message</label>
+    </div>
+    
     <button type="submit">Send Message</button>
     <input type="hidden" name="access_key" value="ca3d289f-a669-4d68-a69e-ea068f68383a">
   </form>
-
-  <!-- Success Message -->
-  <div id="successMessage" class="popup">Message Sent Successfully!</div>
 </section>
-
 
   <!-- fotter section  -->
 <footer class="footer">
