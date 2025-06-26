@@ -5108,54 +5108,85 @@ a img {
 
 /* conatct form */
 
-
 .contact {
   padding: 40px;
   text-align: center;
   max-width: 600px;
   margin: auto;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-.contact input,
-.contact textarea {
-  padding: 10px;
-  font-size: 16px;
+.form-group {
+  position: relative;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 16px 12px 12px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+  background: white;
+  padding: 0 5px;
+  transition: 0.3s ease;
+  font-size: 16px;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 13px;
+  color: #007bff;
 }
 
 .contact button {
-  padding: 12px;
-  background-color: #000;
+  padding: 14px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: #fff;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* Success Popup Style */
-.popup {
-  opacity: 0;
-  margin-top: 20px;
-  color: green;
-  font-weight: bold;
-  transition: opacity 0.4s ease-in-out;
+.contact button:hover {
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.3);
+  transform: translateY(-2px);
 }
-
 /* Show Animation */
-.popup.show {
+/* .popup.show {
   opacity: 1;
   animation: fadeInOut 2.5s ease-in-out forwards;
 }
-
+ */
 @keyframes fadeInOut {
   0% { opacity: 0; transform: translateY(-10px); }
   20% { opacity: 1; transform: translateY(0); }
