@@ -5167,22 +5167,28 @@ a img {
 /* FOOTER SECTION ------------------------ */
 
   .footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
-    position: relative;
+    background: #1488CC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2B32B2, #1488CC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10px 0;
     width: 100%;
-  }
 
-  .footer p {
+    margin-top: 100px;
+    text-align: center;
+    color: #fff
+}
+
+.footer a {
+    text-decoration: none;
     margin: 0;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-  }
+    color: #fff
+}
 
-  .back-to-top {
-    background: linear-gradient(135deg, #ff6a00, #ee0979);
+.back-to-top {
+    background: linear-gradient(135deg, #00c6ff, #0072ff); 
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -5195,6 +5201,7 @@ a img {
 
   .back-to-top:hover {
     transform: scale(1.1);
-    background: linear-gradient(135deg, #ee0979, #ff6a00);
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
   }
+ 
 
